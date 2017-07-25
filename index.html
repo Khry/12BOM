@@ -205,14 +205,14 @@
       setTimeout(function() {
            showLoader(false);
            renderStudents(students);
-         }, 1000)
+         }, 2000)
  		}else{
  			var longname = location.hash;
  			var name = longname.split("#")    
       setTimeout(function() {
            showLoader(false);
            renderStudentInfo(findStudentByLastName(name[1]));
-         }, 1000)
+         }, 2000)
       }  
     });
  
