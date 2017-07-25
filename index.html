@@ -199,25 +199,20 @@
 
   window.addEventListener('hashchange', function(a){
     showLoader(true);
-    clearStudentsList()
+    clearStudentsList();
+    clearStudentInfo();
  		if(window.location.hash === ""){
       setTimeout(function() {
            showLoader(false);
            renderStudents(students);
-         }, 2000)
+         }, 1000)
  		}else{
  			var longname = location.hash;
- 			var name = longname.split("#")
- 			console.log(name);
- 			console.log(name[1]);
-      clearStudentsList();
-      showLoader(true);
-      
-
+ 			var name = longname.split("#")    
       setTimeout(function() {
            showLoader(false);
            renderStudentInfo(findStudentByLastName(name[1]));
-         }, 2000)
+         }, 1000)
       }  
     });
  
