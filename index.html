@@ -198,6 +198,7 @@
 	};
 
   window.addEventListener('hashchange', function(a){
+    debugger
     showLoader(true);
     clearStudentsList()
  		if(window.location.hash === ""){
@@ -210,8 +211,9 @@
  			var name = longname.split("#")
  			console.log(name);
  			console.log(name[1]);
+      clearStudentsList();
       showLoader(true);
-      clearStudentsList()
+      
 
       setTimeout(function() {
            showLoader(false);
